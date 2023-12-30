@@ -390,6 +390,7 @@ iframe {
 
 .right {
   text-align: right;
+  direction: rtl;
 }
 
 strong {
