@@ -1,3 +1,8 @@
+@page
+{
+  size: A4;
+}
+
 body {
   background-color: #d1cdb7;
   -webkit-background-size: 0.3rem 0.3rem;
@@ -12,6 +17,10 @@ body {
   letter-spacing: 0.03rem;
   font-weight: lighter;
   color: #454138;
+  padding: 1em 10em;
+  width: 21cm;
+  height: 29.7cm;
+  margin: auto;
 }
 ::selection {
   background-color: #bab5a1;
@@ -37,6 +46,7 @@ h2 {
   border: solid #454138;
   border-width: 0.1rem 0;
   padding: 0.1rem 1rem;
+  margin-top: 2em;
 }
 h3,
 h4,
@@ -332,7 +342,7 @@ figure {
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   background-color: #dcd8c0;
   padding: 0.5rem;
 }
@@ -357,3 +367,31 @@ iframe {
   border: 0.1rem solid #bab5a1;
 }
 
+.column{
+  width: 100%;
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.column > div {
+  font-size: initial;
+  letter-spacing: initial;
+  word-spacing: initial;
+  vertical-align: top;
+  display : inline-block;
+  width : 40%;
+}
+
+.left {
+  text-align: left;
+  margin-right: 10%;
+  margin-left: 5%;
+}
+
+.right {
+  text-align: right;
+}
+
+strong {
+  font-weight: bold;  
+}
