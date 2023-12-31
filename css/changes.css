@@ -42,3 +42,7 @@ strong {
 fieldset {
     padding: 0;
 }
+
+footer {
+    page-break-after: always;
+}
