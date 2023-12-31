@@ -46,7 +46,6 @@ h2 {
   border: solid #454138;
   border-width: 0.1rem 0;
   padding: 0.1rem 1rem;
-  margin-top: 2em;
 }
 h3,
 h4,
@@ -365,34 +364,4 @@ figure > figcaption {
 }
 iframe {
   border: 0.1rem solid #bab5a1;
-}
-
-.column{
-  width: 100%;
-  font-size: 0;
-  letter-spacing: 0;
-}
-
-.column > div {
-  font-size: initial;
-  letter-spacing: initial;
-  word-spacing: initial;
-  vertical-align: top;
-  display : inline-block;
-  width : 40%;
-}
-
-.left {
-  text-align: left;
-  margin-right: 10%;
-  margin-left: 5%;
-}
-
-.right {
-  text-align: right;
-  direction: rtl;
-}
-
-strong {
-  font-weight: bold;  
 }

@@ -1,0 +1,41 @@
+﻿.column{
+    width: 100%;
+    font-size: 0;
+    letter-spacing: 0;
+    margin-top: 2rem;
+}
+
+.column > div {
+    font-size: initial;
+    letter-spacing: initial;
+    word-spacing: initial;
+    vertical-align: top;
+    display : inline-block;
+    width : 40%;
+}
+
+.left {
+    text-align: left;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+.right {
+    text-align: right;
+    direction: rtl;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 0;
+}
+
+.columns > p {
+    font-size: large;
+}
+
+strong {
+    font-weight: bold;
+}
