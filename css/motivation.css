@@ -1,1 +1,12 @@
 ﻿@import "changes.css";
+
+p {
+    text-indent: 2em;
+    font-size: medium;
+    letter-spacing: .02em;
+    word-spacing: .1em;
+}
+
+.no_indent {
+    text-indent: 0;
+}
