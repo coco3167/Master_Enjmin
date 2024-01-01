@@ -1,4 +1,6 @@
-﻿@page
+﻿@import "index.css";
+
+@page
 {
     size: A4;
 }
@@ -48,10 +50,6 @@ body {
 
 strong {
     font-weight: bold;
-}
-
-fieldset {
-    padding: 0;
 }
 
 footer {
