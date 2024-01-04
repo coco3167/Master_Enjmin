@@ -5,8 +5,15 @@ p {
     font-size: medium;
     letter-spacing: .02em;
     word-spacing: .1em;
+    line-height: 1.75em;
+    
+    padding-bottom: 1em;
 }
 
 .no_indent {
     text-indent: 0;
+    padding-bottom: initial;
+}
+figure {
+    margin-bottom: 0;
 }
