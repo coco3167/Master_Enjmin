@@ -1,0 +1,15 @@
+﻿@import "changes.css";
+
+.titre {
+    break-after: avoid;
+    font-weight: bold;
+}
+
+.right {
+    text-align: left;
+    direction: ltr;
+}
+
+blockquote {
+    margin-left: 1.5em;
+}
