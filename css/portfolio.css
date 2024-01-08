@@ -5,6 +5,10 @@
     font-weight: bold;
 }
 
+.column > div {
+    vertical-align: middle;
+}
+
 .right {
     text-align: left;
     direction: ltr;
@@ -12,4 +16,12 @@
 
 blockquote {
     margin-left: 1.5em;
+}
+
+img {
+    border-radius: 5%;
+}
+
+a {
+    color : blue;
 }
