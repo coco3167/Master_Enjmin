@@ -25,3 +25,35 @@ img {
 a {
     color : blue;
 }
+
+img {
+    width: 100%;
+    height: 15em;
+}
+
+.poitiers
+{
+    width: 100%;
+    height: 100%;
+}
+
+.genVsZomb {
+    width: 80%;
+    height: auto;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+hr {
+    margin-bottom: 1em;
+}
+
+figure {
+    margin-top: 1.5em;
+}
+
+h2 {
+    margin-top: 2em;
+}
