@@ -12,3 +12,32 @@ img {
 .column > div > h3 {
     margin-top: 0;
 }
+
+.main-title {
+    display: -webkit-flex;
+    text-align: center;
+    font-size: 0;
+    height: 100%;
+}
+
+.main-title > h1 {
+    height: 100%;
+    font-size: xx-large;
+    -webkit-flex: 1;
+    padding-top: 55%;
+}
+
+.beauty {    
+    border-color: #454138;
+    border-style: solid;
+    border-width: 0.4em;
+    border-radius: 0.2em;
+}
+
+header {
+    margin-top: 5%;
+}
+footer {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
