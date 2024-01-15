@@ -1,1 +1,14 @@
 ﻿@import "changes.css";
+
+img {
+    width: 100%;
+    height : 11.1em;
+}
+
+.column > div > img {
+    margin-bottom: 1em;
+}
+
+.column > div > h3 {
+    margin-top: 0;
+}
