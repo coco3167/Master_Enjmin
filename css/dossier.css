@@ -1,16 +1,17 @@
 ﻿@import "changes.css";
 
-img {
+.column > div > img {
+    margin-bottom: 1em;
     width: 100%;
     height : 11.1em;
 }
 
-.column > div > img {
-    margin-bottom: 1em;
-}
-
 .column > div > h3 {
     margin-top: 0;
+}
+
+.right {
+    direction: ltr;
 }
 
 .main-title {
@@ -42,10 +43,69 @@ footer {
     margin-bottom: 5%;
 }
 
-li, h4{
+.icons>li, h4{
     font-weight: bold;
+}
+
+h4 {
+    display: inline;
 }
 
 li > p {
     font-weight: initial;
+}
+
+.icons {
+    list-style: none;
+    padding: 0;
+    --icon-space: 1.3em;
+}
+
+.icons > li {
+    padding-left: var(--icon-space);
+}
+
+.icons > li:before {
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: calc( var(--icon-space) * -1 );
+    width: var(--icon-space);
+    margin-right: .5em;
+}
+
+.shield:before {
+    content: "\f3ed";
+}
+
+.progression:before {
+    content: "\f110";
+}
+
+.synthetisation:before {
+    content: "\f247";
+}
+
+a {
+    color : blue;
+}
+
+h2 {
+    margin-top: 3em;
+}
+
+.theme {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+img {
+    margin-bottom: 1.5em;
+    border-radius: 5%;
+}
+
+li {
+    margin-top: 0.5em;
 }
