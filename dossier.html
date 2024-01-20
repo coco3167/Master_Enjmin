@@ -202,9 +202,10 @@
     résolution de votre problématique particulière 1 à 2 pages [6 points]-->
 
     <h1>Partie Spécifique Prog</h1>
-    
     <p class="theme">Réalisation d'une IA de Monopoly</p>
-
+</body>
+<footer></footer>
+<body>    
     <div>
         <h2>Description Problématique</h2>
         <p>
@@ -212,9 +213,10 @@
             Au vu des multiples couches complexe du Monopoly, je compte spécialiser mon IA sur la partie achat/vente des propriétés et bâtiments; les cases chances, caisse communautées et prison étant plutôt séparé du reste du jeu ne seront donc pas pris en compte.<br><br>
             
             <img src="ressources/Monopoly.jpg" alt="Monopoly">
-    
-            La résolution de ce problème se fera en plusieurs étapes : définition des règles utilisées, définition des termes utilisés, objectifs de l'IA, ... et une ouverture vers d'autres pistes d'exploration.
         </p>
+        <hr>
+        La résolution de ce problème se fera en plusieurs étapes : définition des règles utilisées, définition des termes utilisés, objectifs de l'IA, ... et une ouverture vers d'autres pistes d'exploration.
+        
     </div>
     
     <div>
@@ -231,125 +233,193 @@
         <h3><strong>Rendez-vous avenue Henri-Martin ou comment gagner au Monopoly grâce aux chaînes de Markov</strong> par <i>Sébastien Ferenczi, Rémy Jaudun et Brigitte Mossé</i></h3>
         <p>
             Cette article expose les résultats de recherche quand à la fréquentation des différentes cases de monopoly.
-            Ces données me seront fortement utiles pour calculer les gains et risques lors de la création de mon IA.
+            Ces données me seront fortement utiles pour calculer les gains et risques lors de la création de mon IA (image plus bas).
         </p>
     </div>
-    
-    <div>
-        <h2>Description de la solution</h2>
-    
-        <h3>Définition des règles utilisées</h3>
-        <p>
-            Le but du Monopoly est d'être le dernier joueur n'ayant pas fait faillite. Tous les joueurs commencent sur la case départ avec 1500€.<br><br>
-            
-            Le tour de chaque joueur commence par un lancé de 2 dés, le joueur avance d'autant de cases que le nombre indiqué par les dés. S'il a fait un double, il rejoue immédiatement après la fin de son tour. S'il fait 3 doubles d'affilé il va en prison.<br><br>
-            
-            Lorsque le joueur arrive sur une case propriété n'appartenant à personne il peut l'acheter pour le prix indiqué sur le plateau.<br>
-            Lorsque le joueur arrive sur une case propriété appartenant à un autre joueur, il doit lui payer un loyer dépendant de plusieurs facteurs (type de propriété, immpobilier de la carte, ...).<br>
-            Lorsque le joueur arrive sur une case propriété lui appartenant, rien ne se passe.<br>
-            Lorsque le joueur arrive sur une case "Impots - Taxe de Luxe" il devra payer le montant indiqué.<br><br>
-            
-            Si le joueur possède l'ensemble des propriétées d'un groupe de couleur, leur prix est doublée.<br><br>
-            
-            Si un joueur ne peut pas payer une dette il se voit obliger de vendre à la banque (au prix original) l'une de ses propriétés.<br><br>
-            
-            Les enchères, l'hypothèque, les constructions (maisons et hôtels), les cases caisses de communauté et chance ne seront pas pris en compre par l'IA par mesure de simplicité. Je souhaite construire une IA efficace sur les règles les plus importantes du jeu, les autres couches pourront être rajoutée ensuite pour complexifier le jeu.<br>
-        </p>
-        
-        <h3>Définition des termes utilisées</h3>
-        <p>
-            On définit :
-        </p>
-        <ul>
-            <li>
-                "Le joueur" réfère au joueur en train de jouer son tour.
-            </li>
-            <li>
-                T une case du plateau ; T<sub>A</sub> la case du plateau sur laquelle le joueur se trouve ; T<sub>B</sub> une case du plateau statistiquement moyenne.
-            </li>
-            <li>
-                C(T) le coût d'une case T à l'achat ; C<sub>C</sub>(T) le coût contextuel d'une case T (en fonction de la position du joueur par rapport à la case).
-            </li>
-            <li>
-                L(T) le loyer d'une case.
-            </li>
-            <li>
-                R(T) le rendement d'une case.
-            </li>
-            <li>
-                P(X) la probabilité d'un évenement X.
-            </li>
-            <li>
-                D le score d'un lancer de dé quelconque ; D<sub>T</sub> obtenir un lancer de dés permettant d'aller sur la case T.
-            </li>
-            <li>
-                Z l'argent du joueur ; Z<sub>C</sub> l'argent contextuel du joueur (son argent + l'apport potentiel des terrains)
-            </li>
-            <li>
-                A(T<sub>n</sub>) l'apport contextuel de la n-ième case appartenant au joueur ; A<sub>p</sub>(T<sub>n</sub>) l'apport contextuel de la n-ième case appartenant au joueur par rapport au p-ième autre joueur de la partie.
-            </li>
-            <li>
-                &Delta; une contante associée à l'IA représentant son envie de parier sur sa chance, &Delta; &GreaterEqual; 0.
-            </li>
-            <li>
-                &beta; une contante associée à l'IA représentant sa confiance en ses propriétés (en l'argent qu'elles pourraient rapporter), &beta; &GreaterEqual; 0.
-            </li>
-        </ul>
-        
-        <h3>Objectifs de l'IA</h3>
-        <p>
-            L'objectif principal de l'IA est de ne pas faire faillite.<br>
-            Chaque tour elle devra choisir d'acheter ou non une propriété basé sur les nombreuses informations à sa disposition.<br>
-            Deux paramètres permettront un certain contrôle dessus pour lui associer des comportements différents si besoin (niveaux de difficultés, personnalités de l'IA, QA Test).<br>
-        </p>
-        
-        <h3>Calcul des données</h3>
-        <p class="maths">
-            En premier lieu on calcule Z<sub>C</sub> pour savoir de combien d'argent l'IA peut imaginer disposer.<br>
-            Z<sub>C</sub> = Z + A(T)<br><br>
+</body>
+<footer></footer>
+<body>
+    <h2>Description de la solution</h2>
 
-            Pour calculer A(T) on fait la somme des apport contextuel des cases appartenant au joueur pour tous les autres joueurs<br>
-            A(T) = [&sum;<sub>p = 0</sub>( &sum;<sub>n = 0</sub> (A<sub>p</sub>(T<sub>n</sub>)))] * &beta;<br><br>
+    <h3>Définition des règles utilisées</h3>
+    <p>
+        Le but du Monopoly est d'être le dernier joueur n'ayant pas fait <strong>faillite</strong>. Tous les joueurs commencent sur la <strong>case départ</strong> avec <strong>1500M</strong>.<br><br>
+        
+        Le tour de chaque joueur commence par un lancer de <strong>2 dés</strong>, le joueur avance d'autant de cases que le nombre indiqué par les dés. S'il a fait un <strong>double</strong>, il <strong>rejoue</strong> immédiatement après la fin de son tour.<br><br>
+        
+        Lorsque le joueur arrive sur une <strong>case propriété n'appartenant à personne</strong> il peut <strong>l'acheter</strong> pour le prix indiqué sur le plateau.<br>
+        Lorsque le joueur arrive sur une <strong>case propriété appartenant à un autre joueur</strong>, il doit lui payer un <strong>loyer</strong> dépendant du loyer associée à la case.<br>
+        Lorsque le joueur arrive sur une <strong>case propriété lui appartenant</strong>, rien ne se passe.<br>
+        Lorsque le joueur arrive sur une <strong>case "Impots - Taxe de Luxe"</strong> il devra <strong>payer</strong> le montant indiqué (similaire à une case propriété ne lui appartenant pas.<br><br>
+        
+        Si un joueur ne peut pas <strong>payer une dette</strong> il se voit obliger de <strong>vendre à la banque</strong> (au prix original) ses propriétés jusqu'à ce qu'il puisse rembourser l'intégralité (sinon il fait faillite).<br><br>
+        
+        Les enchères, l'hypothèque, les constructions (maisons et hôtels), les cases caisses de communauté et chance ne seront <strong>pas pris en compte</strong> par l'IA par mesure de <strong>simplicité</strong>. Je souhaite construire une IA efficace sur les <strong>règles les plus importantes</strong> du jeu, les autres couches pourront être rajoutée ensuite pour complexifier le jeu.<br>
+    </p>
+    <br><br>
+    <h3>Définition des termes utilisées</h3>
+    <p>
+        On définit :
+    </p>
+    <ul>
+        <li>
+            <strong>"Le joueur"</strong> réfère au joueur en train de jouer son tour.
+        </li>
+        <li>
+            <strong>T</strong> une case du plateau ; <strong>T<sub>A</sub></strong> la case du plateau sur laquelle le joueur se trouve ; <strong>T<sub>B</sub></strong> une case du plateau statistiquement moyenne.
+        </li>
+        <li>
+            <strong>C(T)</strong> le coût d'une case <strong>T</strong> à l'achat ; <strong>C<sub>C</sub>(T)</strong> le coût contextuel d'une case <strong>T</strong> (en fonction de la position du joueur par rapport à la case).
+        </li>
+        <li>
+            <strong>L(T)</strong> le loyer d'une case.
+        </li>
+        <li>
+            <strong>R(T)</strong> le rendement d'une case.
+        </li>
+        <li>
+            <strong>P(X)</strong> la probabilité d'un évenement <strong>X</strong>.
+        </li>
+        <li>
+            <strong>D</strong> le score d'un lancer de dé quelconque ; <strong>D<sub>T</sub></strong> obtenir un lancer de dés permettant d'aller sur la case <strong>T</strong>.
+        </li>
+        <li>
+            <strong>Z</strong> l'argent du joueur ; <strong>Z<sub>C</sub></strong> l'argent contextuel du joueur (son argent + l'apport potentiel des cases lui appartenant)
+        </li>
+        <li>
+            <strong>A(T<sub>n</sub>)</strong> l'apport contextuel de la n-ième case appartenant au joueur ; <strong>A<sub>p</sub>(T<sub>n</sub>)</strong> l'apport contextuel de la n-ième case appartenant au joueur par rapport au p-ième autre joueur de la partie.
+        </li>
+        <li>
+            <strong>M(T)</strong> la dette associée à une case non achetable ; <strong>M<sub>C</sub>(T)</strong> la dette associée contextuel (prends en compte la posision de la case par rapport au joueur)
+        </li>
+        <li>
+            <strong>&Delta;</strong> une contante associée à l'IA représentant son envie de parier sur sa chance, <strong>&Delta; &GreaterEqual; 0</strong>.
+        </li>
+        <li>
+            <strong>&beta;</strong> une contante associée à l'IA représentant sa confiance en ses propriétés (en l'argent qu'elles pourraient rapporter), <strong>&beta; &GreaterEqual; 0</strong>.
+        </li>
+    </ul>
+    <br><br>
+    <h3>Objectifs de l'IA</h3>
+    <p>
+        L'objectif principal de l'IA est de ne pas faire <strong>faillite</strong>.<br>
+        Chaque tour elle devra choisir <strong>d'acheter ou non</strong> une propriété basé sur les nombreuses informations à sa disposition.<br>
+        Deux <strong>paramètres</strong> permettront un certain <strong>contrôle</strong> dessus pour lui associer des <strong>comportements différents</strong> si besoin (niveaux de difficultés, personnalités de l'IA, QA Test).<br>
+    </p>
+</body>
+<footer></footer>
+<body>
+<br><br><br><br>
+    <h3>Calcul des données</h3>
+    <p>
+        Le <strong>coût</strong> et <strong>loyer</strong> des différentes cases sont indiqués ici :<br>
+        <img src="ressources/PrixLoyerMonopoly.PNG" alt="Coût et Loyer">
+    </p>
+    <hr>
+    <p>
+        La <strong>probabilité</strong> de faire un certain score avec un <strong>lancer de 2 dés</strong> est :<br>
+        <img src="ressources/ProbaDeuxDes.PNG" alt="ProbaDeuxDés">
+    </p>
+    <hr>
+</body>
+<footer></footer>
+<body>
+<br><br><br><br>
+    <p>
+        La <strong>probabilité</strong> d'arriver sur les différentes <strong>cases</strong> est indiqué ici :<br>
+        <img src="ressources/FrequentationMonopoly.PNG" alt="FrequentationMonopoly">
+    </p>
+    <hr>
+</body>
+<footer></footer>
+<body>
+<br><br><br><br>
+    <p>            
+        Pour le calcul de l'argent contextuel :<br>
+        <span class="maths">Z<sub>C</sub> = Z + A(T)</span><br><br>
 
-            On calcule l'apport potentiel de la n-ième case par rapport au p-ième joueur à partir de son loyer et de la probabilité qu'il arrive sur celle-ci.<br>
-            A<sub>p</sub>(T<sub>n</sub>) = L(T<sub>n</sub>) * P(D<sub>T</sub>)
-        </p>
+        Pour calculer A(T) on fait la somme des apport contextuel des cases appartenant au joueur, pour tous les autres joueurs :<br>
+        <span class="maths">A(T) = [&sum;<sub>p = 0</sub>( &sum;<sub>n = 0</sub> (A<sub>p</sub>(T<sub>n</sub>)))] * &beta;</span><br><br>
+
+        On calcule l'apport potentiel de la n-ième case par rapport au p-ième joueur à partir de son loyer et de la probabilité qu'il arrive sur celle-ci : <br>
+        <span class="maths">A<sub>p</sub>(T<sub>n</sub>) = L(T<sub>n</sub>) * P(D<sub>T</sub>)</span>
+    </p>
+    <hr>
+    <p>
+        Pour le calcul de l'intérêt actuel :<br>
+        <span class="maths">I(T) = [P(T) / P(T<sub>B</sub>)] * [R(T) / R(T<sub>B</sub>)]</span><br><br>
         
-        <h3>Prise de décision</h3>
-        <p>
-            Le joueur commence son tour par lancer les dés puis se déplacer du nombre de cases demandé.
-        </p>
-        <hr>
-        <p>
-            Une fois arrivé sur la case s'il doit simplement payer, il fourni l'argent nécessaire.<br>
-            S'il lui manque de l'argent il vend à la banque les cases lui appartenant en commençant par celles dont l'intérêt actuel I(T) est le plus faible jusqu'à pouvoir rembourser sa dette.<br>
-            Si la case sur laquelle il est arrivé n'appartient à personne et vaut plus que l'argent actuel Z, il ne l'achète pas et fini son tour.
-        </p>
-        <hr>
-        <p>            
-            Dans le cas où la case n'appartient à personne et vaut moins que l'argent actuel Z : 
-        </p>
-        <hr>
-        <p>
-            Tout d'abord, on calcule Z<sub>C</sub> l'argent contextuel.<br>
-            On parcours ensuite la liste des terrains achetables sur lesquelles le joueur pourra arriver au tour suivant et on garde dans une liste l'ensemble des terrains où C(T) &leq; Z<sub>C</sub> et où C(T) + C(T<sub>A</sub>) > Z<sub>C</sub>.<br>
-            Cela nous permet d'exclure de notre réflexion les terrains achetable dont le joueur est sûr de ne pas pouvoir les acheter ou bien est sûr de pouvoir les acheter même s'il achète la case actuelle.
-        </p>
-        <hr>
-        <p>
-            L'étape suivante est de calculer pour tous les terrains achetable restants leur intérêt I(T) pour ensuite trouver leur intérêt contextuel I<sub>C</sub>(T).
-        </p>
-        <hr>
-        <p>
-            Pour l'ensemble des terrains non achetables ayant un loyer L(T), on calcule leur dette associée, puis leur dette associée contextuel.
-        </p>
-        <hr>
-        <p>
-            Pour finir si &sum; (I<sub>C</sub>) + &sum; (M<sub>C</sub>) > &Delta; le joueur n'achète pas, sinon il achète.
-        </p>
+        On a P(T) en lisant les tableaux au dessus et P(T<sub>B</sub>) en faisant la moyenne des résultats au dessus et on calcule R(T) avec :<br>
+        <span class="maths">R(T) = L(T)/C(T)</span><br><br>
         
-        <h3>Ouverture</h3>
-    </div>
+        De même pour L(T) et C(T) que l'on peut calculer avec les valeurs fournis au dessus.
+    </p>
+    <hr>
+    <p>
+        On calcule l'intérêt contextuel des cases comme ceci :<br>
+        <span class="maths">I<sub>C</sub>(T) = P(D<sub>T</sub>) * [I(T) / I(T<sub>A</sub>)]</span><br>
+    </p>
+    <hr>
+    <p>
+        Enfin, pour calculer la dette associée contextuel :<br>
+        <span class="maths">M<sub>C</sub>(T) = P(D<sub>T</sub>) * M(T)</span><br><br>
+        
+        On calcul la dette associée :<br>
+        <span class="maths">M(T) = [Z<sub>C</sub> - L(T)] / Z<sub>C</sub></span>
+    </p>
+
+<br><br>
+    
+    <h3>Prise de décision</h3>
+    <p>
+        Le joueur commence son tour par <strong>lancer les dés</strong> puis <strong>se déplacer</strong> du nombre de cases demandé.
+    </p>
+    <hr>
+    <p>
+        Une fois arrivé sur la case s'il doit simplement <strong>payer</strong>, il fourni l'argent nécessaire.<br>
+        S'il lui <strong>manque de l'argent</strong> il <strong>vend à la banque</strong> les cases lui appartenant en commençant par celles dont <strong>l'intérêt actuel I(T) est le plus faible</strong> jusqu'à pouvoir rembourser sa dette.<br>
+        Si la case sur laquelle il est arrivé <strong>n'appartient à personne</strong> et vaut <strong>plus que l'argent actuel Z</strong>, il <strong>ne l'achète pas</strong> et fini son tour.
+    </p>
+    <hr>
+    <p>            
+        Dans le cas où la case <strong>n'appartient à personne</strong> et vaut <strong>moins que l'argent actuel Z</strong> : 
+    </p>
+    <hr>
+    <p>
+        Tout d'abord, on calcule <strong>Z<sub>C</sub> l'argent contextuel</strong>.<br>
+        On parcours ensuite la liste des <strong>cases achetables</strong> sur lesquelles le joueur pourra arriver au <strong>tour suivant</strong> et on garde dans une liste l'ensemble des cases où <strong>C(T) &leq; Z<sub>C</sub></strong> et où <strong>C(T) + C(T<sub>A</sub>) > Z<sub>C</sub></strong>.<br>
+        Cela nous permet <strong>d'exclure de notre réflexion</strong> les cases achetable dans le cas où : 
+    </p>
+    <ul>
+        <li>Le joueur est sûr de <strong>ne pas pouvoir les acheter</strong>.</li>
+        <li>Le joueur est sûr de <strong>pouvoir les acheter</strong> même s'il <strong>achète la case actuelle</strong>.</li>
+    </ul>
+    <hr>
+    <p>
+        L'étape suivante est de calculer pour tous les <strong>cases achetable restants</strong> leur <strong>intérêt I(T)</strong> pour ensuite trouver leur <strong>intérêt contextuel I<sub>C</sub>(T)</strong>.
+    </p>
+    <hr>
+    <p>
+        Pour l'ensemble des cases <strong>non achetables</strong> ayant un <strong>loyer L(T)</strong>, on calcule leur <strong>dette associée</strong>, puis leur <strong>dette associée contextuel</strong>.
+    </p>
+    <hr>
+    <p>
+        Pour finir si <strong>&sum; (I<sub>C</sub>) + &sum; (M<sub>C</sub>) > &Delta;</strong> le joueur <strong>n'achète pas</strong>, sinon il <strong>achète</strong>.
+    </p>
+</body>
+<footer></footer>
+<body>
+<br><br><br><br>
+    <h3>Ouverture</h3>
+    <p>
+        L'IA ainsi crée présente l'avantage de proposer une <strong>base solide</strong> sur laquelle travailler pour <strong>l'enrichir</strong>.<br>
+        Elle reste malheureusement <strong>très limitée</strong> et mériterait du travail supplémentaire pour implémenter des réactions au <strong>reste des règles</strong> du Monopoly.<br><br>
+        
+        Les <strong>deux paramètres</strong> présents permettent à l'IA d'être <strong>customisable</strong>, ajouter d'autres paramètres permettant une <strong>plus grande liberté de contrôle</strong> serait intéressant.<br><br>
+        
+        Pour finir, une IA joueur de Monopoly pourrait être construite grâce à du <strong>machine learning</strong>, une surveillance particulière de l'IA serait nécessaire pour <strong>laisser la place à l'erreur</strong> dans ses raisonnements.<br>
+        De plus si un <strong>Game Designer</strong> en a besoin il faudra pouvoir <strong>expliquer son comportement</strong> et le <strong>moduler</strong> au besoin.
+    </p>
 </body>
 <footer></footer>
 <body>

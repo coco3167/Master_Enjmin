@@ -96,16 +96,26 @@ h2 {
 .theme {
     font-weight: bold;
     text-align: center;
-    font-size: 1.5em;
-    margin-top: 5em;
+    margin-top: 50%;
     margin-bottom: 5em;
+    font-size: xx-large;
 }
 
 img {
-    margin-bottom: 1.5em;
-    border-radius: 5%;
+    margin-bottom: 0;
+    border-radius: 2%;
+    margin-top: 0.5em;
 }
 
 li {
     margin-top: 0.5em;
+}
+
+.maths {
+    font-weight: bold;
+    margin-left: 4em;
+}
+
+hr {
+    margin-top: 1em;
 }
