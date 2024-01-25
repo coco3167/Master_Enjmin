@@ -119,3 +119,8 @@ li {
 hr {
     margin-top: 1em;
 }
+
+.column > div > img.height-free, img.height-free {
+    height: auto;
+    width: 100%;
+}
